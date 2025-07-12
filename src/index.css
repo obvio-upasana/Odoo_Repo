@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* StackIT Design System - Night Blue, White & Green Theme
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 60% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 60% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 60% 15%;
+
+    --primary: 240 85% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 240 100% 35%;
+
+    --secondary: 240 10% 96%;
+    --secondary-foreground: 240 60% 15%;
+
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 30% 50%;
+
+    --accent: 120 60% 92%;
+    --accent-foreground: 240 60% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 120 60% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 15% 90%;
+    --input: 240 15% 90%;
+    --ring: 240 85% 25%;
+
+    /* StackIT specific tokens */
+    --upvote: 120 60% 45%;
+    --downvote: 0 84% 60%;
+    --vote-hover: 240 20% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(240 85% 25%), hsl(240 100% 35%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 10% 98%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(240 20% 80% / 0.1), 0 2px 4px -1px hsl(240 20% 80% / 0.06);
+    --shadow-hover: 0 10px 15px -3px hsl(240 20% 70% / 0.1), 0 4px 6px -2px hsl(240 20% 70% / 0.05);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 85% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 75% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 75% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 120 60% 45%;
+    --primary-foreground: 240 85% 8%;
+    --primary-glow: 120 80% 55%;
+
+    --secondary: 240 50% 18%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 50% 18%;
+    --muted-foreground: 240 20% 70%;
+
+    --accent: 120 40% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 120 60% 45%;
+    --success-foreground: 240 85% 8%;
+
+    --border: 240 50% 18%;
+    --input: 240 50% 18%;
+    --ring: 120 60% 45%;
+
+    /* StackIT specific tokens - dark mode */
+    --upvote: 120 60% 45%;
+    --downvote: 0 84% 60%;
+    --vote-hover: 240 40% 20%;
+    
+    /* Gradients - dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(240 85% 8%), hsl(240 75% 15%));
+    --gradient-card: linear-gradient(145deg, hsl(240 75% 12%), hsl(240 60% 15%));
+
+    --sidebar-background: 240 85% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 120 60% 45%;
+    --sidebar-primary-foreground: 240 85% 8%;
+    --sidebar-accent: 240 50% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 50% 18%;
+    --sidebar-ring: 120 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

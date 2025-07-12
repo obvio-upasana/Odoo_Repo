@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackIT - Your Questions Answered!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            Q&A Hub
+        </div>
+        <div class="auth-buttons">
+            <button onclick="alert('Sign In clicked!')">Sign In</button>
+            <button onclick="alert('Sign Up clicked!')">Sign Up</button>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <h1>Got Questions? We've Got Answers!</h1>
+        <p>Your destination for insightful discussions and helpful solutions.</p>
+    </div>
+
+    <div class="main-content">
+        <div class="search-container">
+            <input type="text" placeholder="Search for questions or topics...">
+            <button>Search</button>
+        </div>
+
+        <div class="questions-list">
+            <h2>Top Asked Questions</h2>
+
+            <div class="question-item">
+                <h3>How do I improve my web development skills quickly?</h3>
+                <p>I'm a beginner looking to accelerate my learning in front-end and back-end web development. What are the best resources and practices?</p>
+                <div class="votes">
+                    <button>⬆️ Upvote</button>
+                    <span>150</span>
+                    <button>⬇️ Downvote</button>
+                </div>
+                <div class="discussion-thread">
+                    <h4>Answers:</h4>
+                    <div class="answer-item">
+                        <p>Focus on building small projects from scratch. This hands-on approach solidifies your understanding much faster than just tutorials. Start with a simple To-Do app, then expand to something more complex like a blog.</p>
+                        <div class="meta">Answered by **CodeMaster101** on July 10, 2025</div>
+                        <div class="votes">
+                            <button>⬆️</button>
+                            <span>75</span>
+                            <button>⬇️</button>
+                        </div>
+                    </div>
+                    <div class="answer-item">
+                        <p>Dive deep into one framework (e.g., React for front-end, Node.js with Express for back-end) rather than jumping between many. Consistency is key. Also, contribute to open-source projects!</p>
+                        <div class="meta">Answered by **DevGuru** on July 11, 2025</div>
+                        <div class="votes">
+                            <button>⬆️</button>
+                            <span>60</span>
+                            <button>⬇️</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="question-item">
+                <h3>What are the benefits of learning Python for data analysis?</h3>
+                <p>I'm considering learning Python for data analysis. What are its main advantages compared to other tools like R or Excel?</p>
+                <div class="votes">
+                    <button>⬆️ Upvote</button>
+                    <span>120</span>
+                    <button>⬇️ Downvote</button>
+                </div>
+                <div class="discussion-thread">
+                    <h4>Answers:</h4>
+                    <div class="answer-item">
+                        <p>Python's versatility is a huge plus; you can use it for data analysis, web development, automation, and more. It has powerful libraries like Pandas, NumPy, and Matplotlib which are industry standards.</p>
+                        <div class="meta">Answered by **DataScientistPro** on July 9, 2025</div>
+                        <div class="votes">
+                            <button>⬆️</button>
+                            <span>55</span>
+                            <button>⬇️</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Q&A Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Example: If you wanted to make upvote/downvote buttons functional (client-side only for demo)
+        document.querySelectorAll('.votes button').forEach(button => {
+            button.addEventListener('click', function() {
+                let currentVotes = parseInt(this.parentNode.querySelector('span').innerText);
+                if (this.innerText.includes('⬆️') || this.innerText.includes('Upvote')) {
+                    this.parentNode.querySelector('span').innerText = currentVotes + 1;
+                } else if (this.innerText.includes('⬇️') || this.innerText.includes('Downvote')) {
+                    this.parentNode.querySelector('span').innerText = currentVotes - 1;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
